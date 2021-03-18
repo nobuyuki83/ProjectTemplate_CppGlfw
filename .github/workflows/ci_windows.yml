@@ -28,26 +28,26 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build glfw
         run: |
-        echo "################################"
-        echo "## build glfw"
+          echo "################################"
+          echo "## build glfw"
 
-        git submodule update --init -- 3rd_party/glfw
+          git submodule update --init -- 3rd_party/glfw
 
-        cd 3rd_party/glfw
-        cmake . -A x64
-        cmake --build . --config Release
-        mkdir ../GLFW_Lib
-        cmake --install . --prefix ../GLFW_Lib
-        cd ../..
+          cd 3rd_party/glfw
+          cmake . -A x64
+          cmake --build . --config Release
+          mkdir ../GLFW_Lib
+          cmake --install . --prefix ../GLFW_Lib
+          cd ../..
 
       # Runs a set of commands using the runners shell
       - name: build example
         run: |
-        echo "################################"
-        echo "## build glfw"
+          echo "################################"
+          echo "## build glfw"
 
-        cd 00_OpenWindow
-        mkdir build && cd build
-        cmake ..
-        cmake --build . --config Release
-        cd ../..
+          cd 00_OpenWindow
+          mkdir build && cd build
+          cmake ..
+          cmake --build . --config Release
+          cd ../..
