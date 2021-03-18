@@ -39,7 +39,7 @@ $ mkdir 3rd_party/GLFW_Lib
 $ git submodule update --init 3rd_party/glfw
 $ cd 3rd_party/glfw
 $ cmake .
-$ cmake --build . 
+$ cmake --build . --config Release
 $ cmake --install . --prefix ../GLFW_Lib 
 ``` 
 
