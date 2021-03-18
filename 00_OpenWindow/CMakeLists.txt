@@ -11,11 +11,12 @@ ELSE()
   set(CMAKE_CXX_FLAGS "-Wall -Wno-deprecated-declarations -g")
 ENDIF()
 
-project(000_OpenWindow)
+project(00_OpenWindow)
 
 ################################
 
 # glfw
+SET(GLFW_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../3rd_party/GLFW_Lib)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/FindGLFW.cmake)
 
 # opengl
